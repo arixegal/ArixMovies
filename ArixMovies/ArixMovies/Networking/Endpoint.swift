@@ -17,7 +17,7 @@ protocol Endpoint {
 extension Endpoint {
     
     var apiKey: String {
-        return "api_key=128dbde77c7e613492b373569ad11fa3"
+        return URLs.TMDB.apiKey
     }
     
     var urlComponents: URLComponents {
@@ -42,18 +42,26 @@ enum MovieFeed {
 extension MovieFeed: Endpoint {
     
     var base: String {
-        return "https://api.themoviedb.org"
+        return URLs.TMDB.base
     }
     
     var path: String {
         switch self {
-        case .nowPlaying: return "/3/movie/now_playing"
-        case .topRated: return "/3/movie/top_rated"
+        case .nowPlaying: return URLs.TMDB.paths.nowPlaying
+        case .topRated: return URLs.TMDB.paths.topRated
         }
     }
 }
 
-
+struct GenresFeed : Endpoint{
+    var base: String {
+        return "https://api.themoviedb.org"
+    }
+    
+    var path: String {
+        return "/3/genre/movie/list"
+    }
+}
 
 
 

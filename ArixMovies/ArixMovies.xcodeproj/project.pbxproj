@@ -30,6 +30,8 @@
 		847E1A1C242DF628007042A2 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A1A242DF628007042A2 /* Genre.swift */; };
 		847E1A1E242DF6AA007042A2 /* GenresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A1D242DF6AA007042A2 /* GenresResult.swift */; };
 		847E1A1F242DF6AA007042A2 /* GenresResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A1D242DF6AA007042A2 /* GenresResult.swift */; };
+		847E1A21242DFDF7007042A2 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A20242DFDF7007042A2 /* URLs.swift */; };
+		847E1A22242DFDF7007042A2 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A20242DFDF7007042A2 /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,7 @@
 		847E1A15242DEA5A007042A2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		847E1A1A242DF628007042A2 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		847E1A1D242DF6AA007042A2 /* GenresResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresResult.swift; sourceTree = "<group>"; };
+		847E1A20242DFDF7007042A2 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,7 @@
 				847E1A09242DEA09007042A2 /* GenericAPIClient.swift */,
 				847E1A0A242DEA09007042A2 /* MovieClient.swift */,
 				847E1A07242DEA08007042A2 /* Result.swift */,
+				847E1A20242DFDF7007042A2 /* URLs.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -255,6 +259,7 @@
 				847E19E5242DE5DC007042A2 /* AppDelegate.swift in Sources */,
 				847E1A16242DEA5A007042A2 /* MovieFeedResult.swift in Sources */,
 				847E1A11242DEA09007042A2 /* MovieClient.swift in Sources */,
+				847E1A21242DFDF7007042A2 /* URLs.swift in Sources */,
 				847E1A0B242DEA09007042A2 /* Result.swift in Sources */,
 				847E19E7242DE5DC007042A2 /* SceneDelegate.swift in Sources */,
 				847E1A0D242DEA09007042A2 /* Endpoint.swift in Sources */,
@@ -271,6 +276,7 @@
 				847E1A0E242DEA09007042A2 /* Endpoint.swift in Sources */,
 				847E1A12242DEA09007042A2 /* MovieClient.swift in Sources */,
 				847E1A1F242DF6AA007042A2 /* GenresResult.swift in Sources */,
+				847E1A22242DFDF7007042A2 /* URLs.swift in Sources */,
 				847E1A17242DEA5A007042A2 /* MovieFeedResult.swift in Sources */,
 				847E19FC242DE5E2007042A2 /* ArixMoviesTests.swift in Sources */,
 				847E1A10242DEA09007042A2 /* GenericAPIClient.swift in Sources */,
