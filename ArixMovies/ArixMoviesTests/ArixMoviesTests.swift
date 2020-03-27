@@ -19,16 +19,40 @@ class ArixMoviesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNowPlayingFeed() throws
+    {
+        let exp = XCTestExpectation(description: "Fetch Now Playing Feed")
+        let client = MovieClient()
+        client.getFeed(from: .nowPlaying) { [weak self] result in
+            switch result {
+            case .success(let movieFeedResult):
+                guard let movieResults = movieFeedResult?.results else { return }
+                print(movieResults)
+                exp.fulfill()
+            case .failure(let error):
+                print("the error \(error)")
+            }
+        }
+
+        wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testTopRatedFeed() throws
+    {
+        let exp = XCTestExpectation(description: "Fetch Top Rated Feed")
+        let client = MovieClient()
+        client.getFeed(from: .topRated) { [weak self] result in
+            switch result {
+            case .success(let movieFeedResult):
+                guard let movieResults = movieFeedResult?.results else { return }
+                print(movieResults)
+                exp.fulfill()
+            case .failure(let error):
+                print("the error \(error)")
+            }
         }
+
+        wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
 }
