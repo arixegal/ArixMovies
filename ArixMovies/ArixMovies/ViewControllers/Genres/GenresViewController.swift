@@ -18,7 +18,6 @@ class GenresViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        constCollectionViewTop.constant = -900
         fetchGenres()
     }
 }
