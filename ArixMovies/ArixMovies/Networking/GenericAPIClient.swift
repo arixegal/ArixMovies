@@ -14,6 +14,7 @@ enum APIError: Error {
     case invalidData
     case responseUnsuccessful
     case jsonParsingFailure
+    case invalidURL
     
     var localizedDescription: String {
         switch self {
@@ -22,6 +23,7 @@ enum APIError: Error {
         case .responseUnsuccessful: return "Response Unsuccessful"
         case .jsonParsingFailure: return "JSON Parsing Failure"
         case .jsonConversionFailure: return "JSON Conversion Failure"
+        case .invalidURL: return "Invalid URL"
         }
     }
 }
@@ -29,7 +31,7 @@ enum APIError: Error {
 protocol APIClient {
     
     var session: URLSession { get }
-    func fetch<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
+    func fetch<T: Decodable>(BaseUrlString: String, path: String, queryItems:[String:String], decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
 
 }
 
@@ -63,8 +65,25 @@ extension APIClient {
         return task
     }
     
-    func fetch<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
+    func fetch<T: Decodable>(BaseUrlString: String, path: String, queryItems:[String:String], decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         
+        guard var components = URLComponents(string: BaseUrlString) else {
+            completion(Result.failure(APIError.invalidURL))
+            return
+        }
+        components.path = path
+        components.queryItems = queryItems.keys.compactMap{
+                URLQueryItem(name: $0, value: queryItems[$0])
+        }
+        components.queryItems?.append(URLQueryItem(name: "api_key", value: URLs.TMDB.apiKey))
+        
+        guard let url = components.url else {
+            completion(Result.failure(APIError.invalidURL))
+            return
+        }
+        
+        let request = URLRequest(url: url)
+
         let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
             
             //MARK: change to main queue

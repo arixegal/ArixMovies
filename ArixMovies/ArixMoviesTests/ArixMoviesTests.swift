@@ -19,42 +19,6 @@ class ArixMoviesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testNowPlayingFeed() throws
-    {
-        let exp = XCTestExpectation(description: "Fetch Now Playing Feed")
-        let client = MovieClient()
-        client.getFeed(from: .nowPlaying) {result in
-            switch result {
-            case .success(let movieFeedResult):
-                guard let movieResults = movieFeedResult?.results else { return }
-                print(movieResults)
-                exp.fulfill()
-            case .failure(let error):
-                print("the error \(error)")
-            }
-        }
-
-        wait(for: [exp], timeout: 20, enforceOrder: false)
-    }
-
-    func testTopRatedFeed() throws
-    {
-        let exp = XCTestExpectation(description: "Fetch Top Rated Feed")
-        let client = MovieClient()
-        client.getFeed(from: .topRated) {result in
-            switch result {
-            case .success(let movieFeedResult):
-                guard let movieResults = movieFeedResult?.results else { return }
-                print(movieResults)
-                exp.fulfill()
-            case .failure(let error):
-                print("the error \(error)")
-            }
-        }
-
-        wait(for: [exp], timeout: 20, enforceOrder: false)
-    }
-
     func testGenres() throws
     {
         let exp = XCTestExpectation(description: "Fetch Genres")

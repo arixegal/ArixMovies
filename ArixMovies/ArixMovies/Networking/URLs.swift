@@ -11,7 +11,7 @@ import Foundation
 struct URLs {
     struct TMDB {
         static let base     = "https://api.themoviedb.org/"
-        static let apiKey   = "api_key=128dbde77c7e613492b373569ad11fa3"
+        static let apiKey   = "128dbde77c7e613492b373569ad11fa3"
         struct paths {
             static let nowPlaying  = "/3/movie/now_playing"
             static let topRated    = "/3/movie/top_rated"
