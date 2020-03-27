@@ -50,7 +50,7 @@ extension networking{
             if let _ = self?.genreClient.fetchedResult?.genres{
                 self?.collectionView.reloadData()
                 UIView.animate(withDuration: 1) {
-                    self?.constCollectionViewTop.constant = 8
+                    self?.constCollectionViewTop.constant = 18
                     self?.view.layoutIfNeeded()
                 }
             }
