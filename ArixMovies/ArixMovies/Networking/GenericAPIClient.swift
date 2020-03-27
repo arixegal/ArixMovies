@@ -15,6 +15,8 @@ enum APIError: Error {
     case responseUnsuccessful
     case jsonParsingFailure
     case invalidURL
+    case internalInconsistency
+    case unexpectedResultData
     
     var localizedDescription: String {
         switch self {
@@ -24,6 +26,8 @@ enum APIError: Error {
         case .jsonParsingFailure: return "JSON Parsing Failure"
         case .jsonConversionFailure: return "JSON Conversion Failure"
         case .invalidURL: return "Invalid URL"
+        case .internalInconsistency: return "Internal Inconsistency"
+        case .unexpectedResultData: return "Unexpected result data"
         }
     }
 }
@@ -106,9 +110,6 @@ extension APIClient {
         task.resume()
     }
 }
-
-
-
 
 
 

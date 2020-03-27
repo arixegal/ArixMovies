@@ -38,4 +38,22 @@ class ArixMoviesTests: XCTestCase {
         wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
+    func testMoviesPage() throws
+    {
+        let exp = XCTestExpectation(description: "Fetch Page")
+        let client = MovieClient()
+        
+        client.getMovies(page: 1) { result in
+            switch result {
+            case .success(let moviesResult):
+                guard let movies = moviesResult?.results else { return }
+                print(movies)
+                exp.fulfill()
+            case .failure(let error):
+                print("the error \(error)")
+            }
+        }
+
+        wait(for: [exp], timeout: 20, enforceOrder: false)
+    }
 }

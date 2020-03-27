@@ -13,8 +13,7 @@ struct URLs {
         static let base     = "https://api.themoviedb.org/"
         static let apiKey   = "128dbde77c7e613492b373569ad11fa3"
         struct paths {
-            static let nowPlaying  = "/3/movie/now_playing"
-            static let topRated    = "/3/movie/top_rated"
+            static let popular     = "/3/movie/popular"
             static let genres      = "/3/genre/movie/list"
         }
     }

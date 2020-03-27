@@ -11,27 +11,47 @@ import Foundation
 class MovieClient: APIClient {
     
     let session: URLSession
+    var fetchedMoviePages : [[Movie]]?
+    let numberOfPagesToFetch : Int
     
-    init(configuration: URLSessionConfiguration) {
+    init(configuration: URLSessionConfiguration, numberOfPagesToFetch:Int) {
         self.session = URLSession(configuration: configuration)
+        self.numberOfPagesToFetch = numberOfPagesToFetch
+        self.fetchedMoviePages = [Int](1...numberOfPagesToFetch).compactMap{_ in
+            []
+        }
     }
     
     convenience init() {
-        self.init(configuration: .default)
+        self.init(configuration: .default, numberOfPagesToFetch: 5)
     }
     
-
-    //in the signature of the function in the success case we define the Class type thats is the generic one in the API
     func getGenres(completion: @escaping (Result<GenresResult?, APIError>) -> Void) {
         
         fetch(BaseUrlString: URLs.TMDB.base, path: URLs.TMDB.paths.genres, queryItems: [:], decode: { json -> GenresResult? in
-            guard let movieFeedResult = json as? GenresResult else { return  nil }
-            return movieFeedResult
+            guard let genresResult = json as? GenresResult else {return  nil}
+            return genresResult
         }, completion: completion)
     }
+    
+    func getMovies(page: Int, completion: @escaping (Result<MovieFeedResult?, APIError>) -> Void)
+    {
+        guard page > 0 else{
+            completion(Result.failure(APIError.internalInconsistency))
+            return
+        }
+        fetch(BaseUrlString: URLs.TMDB.base, path: URLs.TMDB.paths.popular, queryItems: ["page":"\(page)"], decode: { json -> MovieFeedResult? in
+            guard let moviesResult = json as? MovieFeedResult else {return  nil}
+            return moviesResult
+        }, completion: completion)
+    }
+    
+    func getAllMoviePages()
+    {
+        [Int](1...numberOfPagesToFetch).forEach {
+            getMovies(page: $0) { result in
+                print(result)
+            }
+        }
+    }
 }
-
-
-
-
-
