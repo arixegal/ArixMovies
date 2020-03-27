@@ -43,7 +43,7 @@ class MovieClient: APIClient {
         self.init(configuration: .default, numberOfPagesToFetch: 5, delegate:delegate)
     }
     
-    func getMovies(page: Int, completion: @escaping (Result<MovieFeedResult?, APIError>) -> Void)
+    func getMoviesNetAPI(page: Int, completion: @escaping (Result<MovieFeedResult?, APIError>) -> Void)
     {
         guard page > 0 else{
             completion(Result.failure(APIError.internalInconsistency))
@@ -59,7 +59,7 @@ class MovieClient: APIClient {
     {
         [Int](1...numberOfPagesToFetch).forEach {
             let page = $0
-            getMovies(page: $0) {[weak self] result in
+            getMoviesNetAPI(page: $0) {[weak self] result in
                 var fetchedMovies : [Movie]
                 switch(result){
                 case .success(let moviesResult):

@@ -25,12 +25,12 @@ class ArixMoviesTests: XCTestCase, MoviesClientDelegate {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func tGenres() throws
+    func testGenres() throws
     {
         let exp = XCTestExpectation(description: "Fetch Genres")
         let client = GenreClient()
         
-        client.getGenres { result in
+        client.getGenresNetAPI { result in
             switch result {
             case .success(let genresResult):
                 guard let genres = genresResult?.genres else { return }
@@ -44,12 +44,12 @@ class ArixMoviesTests: XCTestCase, MoviesClientDelegate {
         wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
-    func tMoviesPage() throws
+    func testMoviesPage() throws
     {
         let exp = XCTestExpectation(description: "Fetch Page")
         let client = MovieClient(delegate: self)
         
-        client.getMovies(page: 1) { result in
+        client.getMoviesNetAPI(page: 1) { result in
             switch result {
             case .success(let moviesResult):
                 guard let movies = moviesResult?.results else { return }
