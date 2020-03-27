@@ -23,7 +23,7 @@ class ArixMoviesTests: XCTestCase {
     {
         let exp = XCTestExpectation(description: "Fetch Now Playing Feed")
         let client = MovieClient()
-        client.getFeed(from: .nowPlaying) { [weak self] result in
+        client.getFeed(from: .nowPlaying) {result in
             switch result {
             case .success(let movieFeedResult):
                 guard let movieResults = movieFeedResult?.results else { return }
@@ -41,7 +41,7 @@ class ArixMoviesTests: XCTestCase {
     {
         let exp = XCTestExpectation(description: "Fetch Top Rated Feed")
         let client = MovieClient()
-        client.getFeed(from: .topRated) { [weak self] result in
+        client.getFeed(from: .topRated) {result in
             switch result {
             case .success(let movieFeedResult):
                 guard let movieResults = movieFeedResult?.results else { return }
