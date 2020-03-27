@@ -1,9 +1,9 @@
 //
 //  Result.swift
-//  ProtocolBasedNetworkingTutorialFinal
+//  ArixMovies
 //
-//  Created by James Rochabrun on 11/27/17.
-//  Copyright © 2017 James Rochabrun. All rights reserved.
+//  Created by Admin on 27/03/2020.
+//  Copyright © 2020 ArixHome. All rights reserved.
 //
 
 import Foundation

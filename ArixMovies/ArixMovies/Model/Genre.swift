@@ -1,5 +1,5 @@
 //
-//  MovieFeedResult.swift
+//  Genre.swift
 //  ArixMovies
 //
 //  Created by Admin on 27/03/2020.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct MovieFeedResult: Decodable {
-    let results: [Movie]?
+struct Genre: Decodable {
+    let id: Int?
+    let name: String?
 }
