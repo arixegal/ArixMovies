@@ -55,11 +55,11 @@ extension MovieFeed: Endpoint {
 
 struct GenresFeed : Endpoint{
     var base: String {
-        return "https://api.themoviedb.org"
+        return URLs.TMDB.base
     }
     
     var path: String {
-        return "/3/genre/movie/list"
+        return URLs.TMDB.paths.genres
     }
 }
 
