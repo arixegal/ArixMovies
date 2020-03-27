@@ -55,4 +55,23 @@ class ArixMoviesTests: XCTestCase {
         wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
+    func testGenres() throws
+    {
+        let exp = XCTestExpectation(description: "Fetch Genres")
+        let client = MovieClient()
+        
+        client.getGenres { result in
+            switch result {
+            case .success(let genresResult):
+                guard let genres = genresResult?.genres else { return }
+                print(genres)
+                exp.fulfill()
+            case .failure(let error):
+                print("the error \(error)")
+            }
+        }
+
+        wait(for: [exp], timeout: 20, enforceOrder: false)
+    }
+
 }
