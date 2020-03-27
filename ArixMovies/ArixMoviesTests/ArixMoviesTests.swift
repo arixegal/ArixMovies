@@ -9,8 +9,14 @@
 import XCTest
 @testable import ArixMovies
 
-class ArixMoviesTests: XCTestCase {
+class ArixMoviesTests: XCTestCase, MoviesClientDelegate {
+    func allPagesFetched() {
+        expAllPagesFetched.fulfill()
+    }
+    
 
+    let expAllPagesFetched = XCTestExpectation(description: "Fetch all movie pages")
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -19,7 +25,7 @@ class ArixMoviesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGenres() throws
+    func tGenres() throws
     {
         let exp = XCTestExpectation(description: "Fetch Genres")
         let client = GenreClient()
@@ -38,10 +44,10 @@ class ArixMoviesTests: XCTestCase {
         wait(for: [exp], timeout: 20, enforceOrder: false)
     }
 
-    func testMoviesPage() throws
+    func tMoviesPage() throws
     {
         let exp = XCTestExpectation(description: "Fetch Page")
-        let client = MovieClient()
+        let client = MovieClient(delegate: self)
         
         client.getMovies(page: 1) { result in
             switch result {
@@ -55,5 +61,12 @@ class ArixMoviesTests: XCTestCase {
         }
 
         wait(for: [exp], timeout: 20, enforceOrder: false)
+    }
+    
+    func testAllMovies()
+    {
+        let client = MovieClient(delegate: self)
+        client.getAllMoviePages()
+        wait(for: [expAllPagesFetched], timeout: 20)
     }
 }

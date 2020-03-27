@@ -8,22 +8,29 @@
 
 import Foundation
 
+protocol MoviesClientDelegate : class
+{
+    func allPagesFetched()
+}
+
 class MovieClient: APIClient {
     
     let session: URLSession
-    var fetchedMoviePages : [[Movie]]?
+    var fetchedMoviePages : [[Movie]?]
     let numberOfPagesToFetch : Int
+    weak var delegate : MoviesClientDelegate?
     
-    init(configuration: URLSessionConfiguration, numberOfPagesToFetch:Int) {
+    init(configuration: URLSessionConfiguration, numberOfPagesToFetch:Int, delegate: MoviesClientDelegate?) {
         self.session = URLSession(configuration: configuration)
         self.numberOfPagesToFetch = numberOfPagesToFetch
-        self.fetchedMoviePages = [Int](1...numberOfPagesToFetch).compactMap{_ in
-            []
+        self.delegate = delegate
+        self.fetchedMoviePages = [Int](1...numberOfPagesToFetch).map{_ in
+            nil
         }
     }
     
-    convenience init() {
-        self.init(configuration: .default, numberOfPagesToFetch: 5)
+    convenience init(delegate : MoviesClientDelegate) {
+        self.init(configuration: .default, numberOfPagesToFetch: 5, delegate:delegate)
     }
     
     func getMovies(page: Int, completion: @escaping (Result<MovieFeedResult?, APIError>) -> Void)
@@ -41,9 +48,31 @@ class MovieClient: APIClient {
     func getAllMoviePages()
     {
         [Int](1...numberOfPagesToFetch).forEach {
-            getMovies(page: $0) { result in
-                print(result)
+            let page = $0
+            getMovies(page: $0) {[weak self] result in
+                var fetchedMovies : [Movie]
+                switch(result){
+                case .success(let moviesResult):
+                    fetchedMovies = moviesResult?.results ?? []
+                case .failure(_):
+                    fetchedMovies = []
+                }
+                
+                
+                if let weakSelf = self
+                {
+                    weakSelf.fetchedMoviePages[page - 1] = fetchedMovies // put in q
+                    if (weakSelf.allFetched())
+                    {
+                        weakSelf.delegate?.allPagesFetched()
+                    }
+                }
             }
         }
+    }
+    
+    func allFetched() -> Bool
+    {
+        return fetchedMoviePages.compactMap{$0}.count == fetchedMoviePages.count // put in q
     }
 }
