@@ -11,6 +11,7 @@ import UIKit
 class GenresViewController: UIViewController {
     
     let genreClient = GenreClient()
+    let movieClient = MovieClient(delegate: nil)
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,6 +20,7 @@ class GenresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchGenres()
+        movieClient.getAllMoviePages()
     }
 }
 
@@ -39,6 +41,10 @@ extension collectionView : UICollectionViewDelegate, UICollectionViewDataSource
             }
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        sleep(0)
     }
 }
 

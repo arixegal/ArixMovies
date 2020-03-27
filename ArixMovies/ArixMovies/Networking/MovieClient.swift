@@ -39,7 +39,7 @@ class MovieClient: APIClient {
         }
     }
     
-    convenience init(delegate : MoviesClientDelegate) {
+    convenience init(delegate : MoviesClientDelegate?) {
         self.init(configuration: .default, numberOfPagesToFetch: 5, delegate:delegate)
     }
     
