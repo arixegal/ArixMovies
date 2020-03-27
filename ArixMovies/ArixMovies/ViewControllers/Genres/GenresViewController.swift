@@ -14,8 +14,11 @@ class GenresViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var constCollectionViewTop: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        constCollectionViewTop.constant = -900
         fetchGenres()
     }
 }
@@ -47,6 +50,10 @@ extension networking{
         genreClient.fetchAllGenres(){[weak self] in
             if let _ = self?.genreClient.fetchedResult?.genres{
                 self?.collectionView.reloadData()
+                UIView.animate(withDuration: 1) {
+                    self?.constCollectionViewTop.constant = 8
+                    self?.view.layoutIfNeeded()
+                }
             }
             else
             {

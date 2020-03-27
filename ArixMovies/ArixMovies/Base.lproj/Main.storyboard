@@ -69,13 +69,20 @@
                         <constraints>
                             <constraint firstItem="A2j-Tg-04O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="4oD-IW-bSS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2j-Tg-04O" secondAttribute="trailing" constant="24" id="Dac-yc-lsU"/>
-                            <constraint firstItem="A2j-Tg-04O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="a4Q-xA-FTr"/>
+                            <constraint firstItem="A2j-Tg-04O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="a4Q-xA-FTr">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="constant">
+                                        <integer key="value" value="-900"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstAttribute="bottom" secondItem="A2j-Tg-04O" secondAttribute="bottom" id="oTt-2c-jzv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="A2j-Tg-04O" id="vt5-WW-uUP"/>
+                        <outlet property="constCollectionViewTop" destination="a4Q-xA-FTr" id="Mjo-gn-Ebs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
