@@ -29,6 +29,7 @@ class MovieClient: APIClient {
     var combinedResults : [Movie]{
         return fetchedMoviePages.compactMap{$0}.flatMap{$0}
     }
+    var userSelectedGenreId : Int?
     
     init(configuration: URLSessionConfiguration, numberOfPagesToFetch:Int, delegate: MoviesClientDelegate?) {
         self.session = URLSession(configuration: configuration)

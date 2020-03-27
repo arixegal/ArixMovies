@@ -34,6 +34,7 @@
 		84AFE51C242E4D9A0084D0EA /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE51B242E4D9A0084D0EA /* GenresViewController.swift */; };
 		84AFE51F242E59EB0084D0EA /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE51E242E59EB0084D0EA /* GenreCell.swift */; };
 		84CDD6A3242E77C30004B517 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD6A2242E77C30004B517 /* MoviesViewController.swift */; };
+		84CDD6A6242E7F9A0004B517 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD6A5242E7F9A0004B517 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		84AFE51B242E4D9A0084D0EA /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		84AFE51E242E59EB0084D0EA /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
 		84CDD6A2242E77C30004B517 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		84CDD6A5242E7F9A0004B517 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +112,12 @@
 		847E19E3242DE5DC007042A2 /* ArixMovies */ = {
 			isa = PBXGroup;
 			children = (
+				84CDD6A4242E7C2F0004B517 /* UI */,
 				84AFE51A242E4D720084D0EA /* ViewControllers */,
 				847E1A13242DEA3D007042A2 /* Model */,
 				847E1A06242DE883007042A2 /* Networking */,
 				847E19E4242DE5DC007042A2 /* AppDelegate.swift */,
 				847E19E6242DE5DC007042A2 /* SceneDelegate.swift */,
-				847E19EA242DE5DC007042A2 /* Main.storyboard */,
-				847E19ED242DE5E1007042A2 /* Assets.xcassets */,
-				847E19EF242DE5E1007042A2 /* LaunchScreen.storyboard */,
 				847E19F2242DE5E1007042A2 /* Info.plist */,
 			);
 			path = ArixMovies;
@@ -177,8 +177,19 @@
 			isa = PBXGroup;
 			children = (
 				84CDD6A2242E77C30004B517 /* MoviesViewController.swift */,
+				84CDD6A5242E7F9A0004B517 /* MovieCell.swift */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		84CDD6A4242E7C2F0004B517 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				847E19ED242DE5E1007042A2 /* Assets.xcassets */,
+				847E19EF242DE5E1007042A2 /* LaunchScreen.storyboard */,
+				847E19EA242DE5DC007042A2 /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				84CDD6A3242E77C30004B517 /* MoviesViewController.swift in Sources */,
 				847E1A16242DEA5A007042A2 /* MovieFeedResult.swift in Sources */,
 				847E1A11242DEA09007042A2 /* MovieClient.swift in Sources */,
+				84CDD6A6242E7F9A0004B517 /* MovieCell.swift in Sources */,
 				847E1A21242DFDF7007042A2 /* URLs.swift in Sources */,
 				847E1A24242E3562007042A2 /* GenreClient.swift in Sources */,
 				847E1A0B242DEA09007042A2 /* Result.swift in Sources */,

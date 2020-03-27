@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1od-in-xAu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mystery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1od-in-xAu">
                                                     <rect key="frame" x="8" y="0.0" width="140" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TA8-yv-qhK"/>
@@ -104,10 +104,72 @@
                     <view key="view" contentMode="scaleToFill" id="7nw-Rz-PKH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XLg-o7-zOM">
+                                <rect key="frame" x="0.0" y="62" width="414" height="800"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" id="Cam-7F-0X6" customClass="MovieCell" customModule="ArixMovies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="294"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cam-7F-0X6" id="eUZ-1j-IGR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="294"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-f5-6cc">
+                                                    <rect key="frame" x="24" y="8" width="366" height="278"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incredibles2" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-EZ-zsV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="185" height="278"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="185" id="WwE-Vg-p4V"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="278" id="B5a-fN-CaB"/>
+                                                        <constraint firstItem="DJT-EZ-zsV" firstAttribute="leading" secondItem="Dic-f5-6cc" secondAttribute="leading" id="Id7-Dm-kji"/>
+                                                        <constraint firstItem="DJT-EZ-zsV" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" id="Uez-2e-UEg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DJT-EZ-zsV" secondAttribute="bottom" id="zdA-7t-O0c"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Dic-f5-6cc" secondAttribute="trailing" constant="24" id="FBQ-RI-8IX"/>
+                                                <constraint firstItem="Dic-f5-6cc" firstAttribute="leading" secondItem="eUZ-1j-IGR" secondAttribute="leading" constant="24" id="OEf-uY-4E9"/>
+                                                <constraint firstItem="Dic-f5-6cc" firstAttribute="top" secondItem="eUZ-1j-IGR" secondAttribute="top" constant="8" id="iaK-lV-RtI"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dic-f5-6cc" secondAttribute="bottom" constant="8" id="kUz-XG-dTb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WKD-Zd-plX" id="ekS-Oq-ryb"/>
+                                    <outlet property="delegate" destination="WKD-Zd-plX" id="9dv-GT-cEA"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZKL-y9-slB">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZKL-y9-slB" firstAttribute="centerX" secondItem="s3W-6n-RG4" secondAttribute="centerX" id="4o3-j4-3fP"/>
+                            <constraint firstItem="s3W-6n-RG4" firstAttribute="trailing" secondItem="XLg-o7-zOM" secondAttribute="trailing" id="99t-bi-zc3"/>
+                            <constraint firstItem="XLg-o7-zOM" firstAttribute="top" secondItem="s3W-6n-RG4" secondAttribute="top" constant="18" id="NFk-aQ-3dZ"/>
+                            <constraint firstItem="s3W-6n-RG4" firstAttribute="bottom" secondItem="XLg-o7-zOM" secondAttribute="bottom" id="RLe-MV-uLF"/>
+                            <constraint firstItem="ZKL-y9-slB" firstAttribute="centerY" secondItem="s3W-6n-RG4" secondAttribute="centerY" id="asA-3e-Xia"/>
+                            <constraint firstItem="XLg-o7-zOM" firstAttribute="leading" secondItem="s3W-6n-RG4" secondAttribute="leading" id="hl4-Ay-hUp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s3W-6n-RG4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popular Movies" id="F5H-N5-y30" userLabel="Popular Movies"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ZKL-y9-slB" id="Ynv-qq-OAl"/>
+                        <outlet property="tableView" destination="XLg-o7-zOM" id="3oH-rU-w5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-Bu-DBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,4 +194,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Incredibles2" width="185" height="278"/>
+    </resources>
 </document>
