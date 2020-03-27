@@ -14,8 +14,8 @@ class GenresViewController: UIViewController {
     let movieClient = MovieClient(delegate: nil)
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
     @IBOutlet weak var constCollectionViewTop: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +58,12 @@ extension networking{
         genreClient.fetchAllGenres(){[weak self] in
             if let _ = self?.genreClient.fetchedResult?.genres{
                 self?.collectionView.reloadData()
+                self?.activityIndicator.stopAnimating()
                 UIView.animate(withDuration: 1) {
                     self?.constCollectionViewTop.constant = 18
                     self?.view.layoutIfNeeded()
                 }
+ 
             }
             else
             {

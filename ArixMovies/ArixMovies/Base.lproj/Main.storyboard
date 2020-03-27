@@ -64,9 +64,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="B9k-lv-u1C"/>
                                 </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="q9w-tQ-QFh">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="q9w-tQ-QFh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Li-YY-OtV"/>
                             <constraint firstItem="A2j-Tg-04O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="4oD-IW-bSS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2j-Tg-04O" secondAttribute="trailing" constant="24" id="Dac-yc-lsU"/>
                             <constraint firstItem="A2j-Tg-04O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="a4Q-xA-FTr">
@@ -77,11 +82,13 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="A2j-Tg-04O" secondAttribute="bottom" id="oTt-2c-jzv"/>
+                            <constraint firstItem="q9w-tQ-QFh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="scK-gd-bZr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movie Genres" id="0SR-N5-mav"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="q9w-tQ-QFh" id="aZW-kv-dQJ"/>
                         <outlet property="collectionView" destination="A2j-Tg-04O" id="vt5-WW-uUP"/>
                         <outlet property="constCollectionViewTop" destination="a4Q-xA-FTr" id="Mjo-gn-Ebs"/>
                     </connections>
