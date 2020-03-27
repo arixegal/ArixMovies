@@ -26,14 +26,6 @@ class MovieClient: APIClient {
         self.init(configuration: .default, numberOfPagesToFetch: 5)
     }
     
-    func getGenres(completion: @escaping (Result<GenresResult?, APIError>) -> Void) {
-        
-        fetch(BaseUrlString: URLs.TMDB.base, path: URLs.TMDB.paths.genres, queryItems: [:], decode: { json -> GenresResult? in
-            guard let genresResult = json as? GenresResult else {return  nil}
-            return genresResult
-        }, completion: completion)
-    }
-    
     func getMovies(page: Int, completion: @escaping (Result<MovieFeedResult?, APIError>) -> Void)
     {
         guard page > 0 else{

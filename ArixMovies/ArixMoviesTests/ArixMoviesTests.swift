@@ -22,7 +22,7 @@ class ArixMoviesTests: XCTestCase {
     func testGenres() throws
     {
         let exp = XCTestExpectation(description: "Fetch Genres")
-        let client = MovieClient()
+        let client = GenreClient()
         
         client.getGenres { result in
             switch result {
