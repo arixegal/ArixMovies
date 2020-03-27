@@ -124,13 +124,64 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="185" id="WwE-Vg-p4V"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incredibles 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-l6-WUr">
+                                                            <rect key="frame" x="193" y="8" width="165" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 14, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-9r-dgn">
+                                                            <rect key="frame" x="193" y="33" width="165" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-Fk-Dzm">
+                                                            <rect key="frame" x="193" y="62" width="165" height="125.5"/>
+                                                            <string key="text">Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3o-8z-Lph">
+                                                            <rect key="frame" x="185" y="217.5" width="181" height="0.5"/>
+                                                            <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="0.5" id="R9Y-Ee-wSl"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbD-E6-Efv">
+                                                            <rect key="frame" x="193" y="218" width="173" height="60"/>
+                                                            <state key="normal" title=" Trailer" image="play" catalog="system">
+                                                                <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="xah-l6-WUr" firstAttribute="leading" secondItem="DJT-EZ-zsV" secondAttribute="trailing" constant="8" id="5Fl-6B-83i"/>
+                                                        <constraint firstItem="P2R-Fk-Dzm" firstAttribute="top" secondItem="yq4-9r-dgn" secondAttribute="bottom" constant="12" id="6xP-fb-hLh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xah-l6-WUr" secondAttribute="trailing" constant="8" id="7bA-ca-AFX"/>
                                                         <constraint firstAttribute="height" constant="278" id="B5a-fN-CaB"/>
                                                         <constraint firstItem="DJT-EZ-zsV" firstAttribute="leading" secondItem="Dic-f5-6cc" secondAttribute="leading" id="Id7-Dm-kji"/>
+                                                        <constraint firstItem="xah-l6-WUr" firstAttribute="leading" secondItem="P2R-Fk-Dzm" secondAttribute="leading" id="Jb5-f8-s9d"/>
+                                                        <constraint firstItem="P2R-Fk-Dzm" firstAttribute="trailing" secondItem="xah-l6-WUr" secondAttribute="trailing" id="OX8-0n-UsN"/>
+                                                        <constraint firstItem="yq4-9r-dgn" firstAttribute="leading" secondItem="xah-l6-WUr" secondAttribute="leading" id="QjQ-RP-95z"/>
+                                                        <constraint firstAttribute="trailing" secondItem="p3o-8z-Lph" secondAttribute="trailing" id="R5f-V8-4ir"/>
                                                         <constraint firstItem="DJT-EZ-zsV" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" id="Uez-2e-UEg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YbD-E6-Efv" secondAttribute="trailing" id="WXl-sc-zv9"/>
+                                                        <constraint firstItem="YbD-E6-Efv" firstAttribute="leading" secondItem="xah-l6-WUr" secondAttribute="leading" id="bZ7-kz-Wyd"/>
+                                                        <constraint firstItem="xah-l6-WUr" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" constant="8" id="cgB-I4-GsZ"/>
+                                                        <constraint firstItem="YbD-E6-Efv" firstAttribute="top" secondItem="p3o-8z-Lph" secondAttribute="bottom" id="dH7-S1-C3B"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YbD-E6-Efv" secondAttribute="bottom" id="eId-TZ-Iel"/>
+                                                        <constraint firstItem="yq4-9r-dgn" firstAttribute="trailing" secondItem="xah-l6-WUr" secondAttribute="trailing" id="fSb-BC-0w9"/>
+                                                        <constraint firstItem="p3o-8z-Lph" firstAttribute="leading" secondItem="DJT-EZ-zsV" secondAttribute="trailing" id="fnx-hn-2MI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="p3o-8z-Lph" secondAttribute="bottom" constant="60" id="sZG-94-vhU"/>
+                                                        <constraint firstItem="yq4-9r-dgn" firstAttribute="top" secondItem="xah-l6-WUr" secondAttribute="bottom" constant="4" id="z0m-Av-dc8"/>
                                                         <constraint firstAttribute="bottom" secondItem="DJT-EZ-zsV" secondAttribute="bottom" id="zdA-7t-O0c"/>
                                                     </constraints>
                                                 </view>
@@ -142,6 +193,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="Dic-f5-6cc" secondAttribute="bottom" constant="8" id="kUz-XG-dTb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ivPoster" destination="DJT-EZ-zsV" id="t1y-Fh-6xi"/>
+                                            <outlet property="viewMain" destination="Dic-f5-6cc" id="25y-so-Uyg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -173,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-Bu-DBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="70"/>
+            <point key="canvasLocation" x="1818.840579710145" y="69.642857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dh1-RH-ejG">
@@ -196,5 +251,6 @@
     </scenes>
     <resources>
         <image name="Incredibles2" width="185" height="278"/>
+        <image name="play" catalog="system" width="120" height="128"/>
     </resources>
 </document>

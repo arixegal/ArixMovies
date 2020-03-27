@@ -35,6 +35,7 @@
 		84AFE51F242E59EB0084D0EA /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFE51E242E59EB0084D0EA /* GenreCell.swift */; };
 		84CDD6A3242E77C30004B517 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD6A2242E77C30004B517 /* MoviesViewController.swift */; };
 		84CDD6A6242E7F9A0004B517 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD6A5242E7F9A0004B517 /* MovieCell.swift */; };
+		84CDD6A9242E89B70004B517 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CDD6A8242E89B70004B517 /* UIImageViewX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		84AFE51E242E59EB0084D0EA /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
 		84CDD6A2242E77C30004B517 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		84CDD6A5242E7F9A0004B517 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		84CDD6A8242E89B70004B517 /* UIImageViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		847E19E3242DE5DC007042A2 /* ArixMovies */ = {
 			isa = PBXGroup;
 			children = (
+				84CDD6A7242E89900004B517 /* Extensions */,
 				84CDD6A4242E7C2F0004B517 /* UI */,
 				84AFE51A242E4D720084D0EA /* ViewControllers */,
 				847E1A13242DEA3D007042A2 /* Model */,
@@ -190,6 +193,14 @@
 				847E19EA242DE5DC007042A2 /* Main.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		84CDD6A7242E89900004B517 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84CDD6A8242E89B70004B517 /* UIImageViewX.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84AFE51C242E4D9A0084D0EA /* GenresViewController.swift in Sources */,
+				84CDD6A9242E89B70004B517 /* UIImageViewX.swift in Sources */,
 				847E1A1E242DF6AA007042A2 /* GenresResult.swift in Sources */,
 				847E1A0F242DEA09007042A2 /* GenericAPIClient.swift in Sources */,
 				847E1A18242DEA5A007042A2 /* Movie.swift in Sources */,

@@ -10,15 +10,34 @@ import UIKit
 
 class MovieCell: UITableViewCell {
 
+    var movie : Movie?{
+        didSet{
+            guard let movieEntity = movie else {return}
+            if let posterFullURL = movieEntity.posterFullURL{
+                ivPoster.alpha = 1
+                ivPoster.downloaded(from: posterFullURL)
+            }
+            else{
+                ivPoster.alpha = 0
+            }
+            
+        }
+    }
+    
+    @IBOutlet weak var ivPoster: UIImageView!
+    @IBOutlet weak var viewMain: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewMain.layer.borderColor = UIColor.gray.cgColor
+        viewMain.layer.borderWidth = 0.5
+        viewMain.layer.shadowColor = UIColor.gray.cgColor
+        viewMain.layer.shadowOpacity = 0.5
+        viewMain.layer.shadowOffset = .zero
+        viewMain.layer.shadowRadius = 4
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

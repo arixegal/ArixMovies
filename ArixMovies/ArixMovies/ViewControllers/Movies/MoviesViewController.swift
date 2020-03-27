@@ -8,9 +8,11 @@
 
 import UIKit
 
+
+
 class MoviesViewController: UIViewController {
 
-    var allPagesAlreadyFetched = false
+    var fetchedMovies : [Movie]?
     var movieClient : MovieClient?
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -18,7 +20,7 @@ class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if allPagesAlreadyFetched{
+        if fetchedMovies != nil{
             showMovies()
         }
     }
@@ -32,6 +34,12 @@ extension tableView : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        
+        if let movies = fetchedMovies{
+            if indexPath.row < movies.count{
+                cell.movie = movies[indexPath.row]
+            }
+        }
         return cell
     }
 }
@@ -40,7 +48,7 @@ private typealias movieClient = MoviesViewController
 extension movieClient : MoviesClientDelegate
 {
     func allPagesFetched() {
-        allPagesAlreadyFetched = true
+        fetchedMovies = movieClient?.combinedResults
         showMovies()
     }
     
