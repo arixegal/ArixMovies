@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A2j-Tg-04O">
-                                <rect key="frame" x="24" y="44" width="366" height="852"/>
+                                <rect key="frame" x="24" y="52" width="366" height="844"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T4u-lY-LUu">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="8" minimumInteritemSpacing="4" id="T4u-lY-LUu">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -27,26 +27,30 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreCell" id="CMg-xF-b8h" customClass="GenreCell" customModule="ArixMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D7x-My-qdd">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1od-in-xAu">
-                                                    <rect key="frame" x="8" y="0.0" width="44" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="140" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="TA8-yv-qhK"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="TjT-xB-zmP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1od-in-xAu" firstAttribute="top" secondItem="D7x-My-qdd" secondAttribute="top" id="Bqg-ul-don"/>
                                                 <constraint firstAttribute="bottom" secondItem="1od-in-xAu" secondAttribute="bottom" id="YwY-cv-vqL"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1od-in-xAu" secondAttribute="trailing" constant="8" id="eiB-ed-bg5"/>
+                                                <constraint firstAttribute="trailing" secondItem="1od-in-xAu" secondAttribute="trailing" constant="8" id="eiB-ed-bg5"/>
                                                 <constraint firstItem="1od-in-xAu" firstAttribute="leading" secondItem="D7x-My-qdd" secondAttribute="leading" constant="8" id="sgH-fx-bRj"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -65,7 +69,7 @@
                         <constraints>
                             <constraint firstItem="A2j-Tg-04O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="4oD-IW-bSS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2j-Tg-04O" secondAttribute="trailing" constant="24" id="Dac-yc-lsU"/>
-                            <constraint firstItem="A2j-Tg-04O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a4Q-xA-FTr"/>
+                            <constraint firstItem="A2j-Tg-04O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="a4Q-xA-FTr"/>
                             <constraint firstAttribute="bottom" secondItem="A2j-Tg-04O" secondAttribute="bottom" id="oTt-2c-jzv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
