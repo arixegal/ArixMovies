@@ -90,6 +90,22 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="69.642857142857139"/>
         </scene>
+        <!--Movies View Controller-->
+        <scene sceneID="a0b-eF-fzR">
+            <objects>
+                <viewController storyboardIdentifier="MoviesViewController" id="WKD-Zd-plX" userLabel="Movies View Controller" customClass="MoviesViewController" customModule="ArixMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7nw-Rz-PKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="s3W-6n-RG4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Popular Movies" id="F5H-N5-y30" userLabel="Popular Movies"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-Bu-DBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="70"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dh1-RH-ejG">
             <objects>

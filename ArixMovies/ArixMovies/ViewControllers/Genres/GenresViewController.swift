@@ -44,7 +44,10 @@ extension collectionView : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        sleep(0)
+        guard let genres = genreClient.fetchedResult?.genres else {return}
+        guard indexPath.item < genres.count else {return}
+        guard let VC = self.storyboard?.instantiateViewController(identifier: "MoviesViewController") else {return}
+        navigationController?.pushViewController(VC, animated: true)
     }
 }
 
