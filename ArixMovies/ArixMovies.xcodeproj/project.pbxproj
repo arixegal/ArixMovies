@@ -14,6 +14,18 @@
 		847E19EE242DE5E1007042A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847E19ED242DE5E1007042A2 /* Assets.xcassets */; };
 		847E19F1242DE5E1007042A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E19EF242DE5E1007042A2 /* LaunchScreen.storyboard */; };
 		847E19FC242DE5E2007042A2 /* ArixMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E19FB242DE5E2007042A2 /* ArixMoviesTests.swift */; };
+		847E1A0B242DEA09007042A2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A07242DEA08007042A2 /* Result.swift */; };
+		847E1A0C242DEA09007042A2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A07242DEA08007042A2 /* Result.swift */; };
+		847E1A0D242DEA09007042A2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A08242DEA09007042A2 /* Endpoint.swift */; };
+		847E1A0E242DEA09007042A2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A08242DEA09007042A2 /* Endpoint.swift */; };
+		847E1A0F242DEA09007042A2 /* GenericAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A09242DEA09007042A2 /* GenericAPIClient.swift */; };
+		847E1A10242DEA09007042A2 /* GenericAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A09242DEA09007042A2 /* GenericAPIClient.swift */; };
+		847E1A11242DEA09007042A2 /* MovieClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A0A242DEA09007042A2 /* MovieClient.swift */; };
+		847E1A12242DEA09007042A2 /* MovieClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A0A242DEA09007042A2 /* MovieClient.swift */; };
+		847E1A16242DEA5A007042A2 /* MovieFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A14242DEA5A007042A2 /* MovieFeedResult.swift */; };
+		847E1A17242DEA5A007042A2 /* MovieFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A14242DEA5A007042A2 /* MovieFeedResult.swift */; };
+		847E1A18242DEA5A007042A2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A15242DEA5A007042A2 /* Movie.swift */; };
+		847E1A19242DEA5A007042A2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E1A15242DEA5A007042A2 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,12 @@
 		847E19F7242DE5E2007042A2 /* ArixMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArixMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847E19FB242DE5E2007042A2 /* ArixMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArixMoviesTests.swift; sourceTree = "<group>"; };
 		847E19FD242DE5E2007042A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847E1A07242DEA08007042A2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		847E1A08242DEA09007042A2 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		847E1A09242DEA09007042A2 /* GenericAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericAPIClient.swift; sourceTree = "<group>"; };
+		847E1A0A242DEA09007042A2 /* MovieClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieClient.swift; sourceTree = "<group>"; };
+		847E1A14242DEA5A007042A2 /* MovieFeedResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieFeedResult.swift; sourceTree = "<group>"; };
+		847E1A15242DEA5A007042A2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,7 @@
 		847E19E3242DE5DC007042A2 /* ArixMovies */ = {
 			isa = PBXGroup;
 			children = (
+				847E1A13242DEA3D007042A2 /* Model */,
 				847E1A06242DE883007042A2 /* Networking */,
 				847E19E4242DE5DC007042A2 /* AppDelegate.swift */,
 				847E19E6242DE5DC007042A2 /* SceneDelegate.swift */,
@@ -103,8 +122,21 @@
 		847E1A06242DE883007042A2 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				847E1A08242DEA09007042A2 /* Endpoint.swift */,
+				847E1A09242DEA09007042A2 /* GenericAPIClient.swift */,
+				847E1A0A242DEA09007042A2 /* MovieClient.swift */,
+				847E1A07242DEA08007042A2 /* Result.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		847E1A13242DEA3D007042A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				847E1A15242DEA5A007042A2 /* Movie.swift */,
+				847E1A14242DEA5A007042A2 /* MovieFeedResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +241,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				847E19E9242DE5DC007042A2 /* ViewController.swift in Sources */,
+				847E1A0F242DEA09007042A2 /* GenericAPIClient.swift in Sources */,
+				847E1A18242DEA5A007042A2 /* Movie.swift in Sources */,
 				847E19E5242DE5DC007042A2 /* AppDelegate.swift in Sources */,
+				847E1A16242DEA5A007042A2 /* MovieFeedResult.swift in Sources */,
+				847E1A11242DEA09007042A2 /* MovieClient.swift in Sources */,
+				847E1A0B242DEA09007042A2 /* Result.swift in Sources */,
 				847E19E7242DE5DC007042A2 /* SceneDelegate.swift in Sources */,
+				847E1A0D242DEA09007042A2 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847E1A19242DEA5A007042A2 /* Movie.swift in Sources */,
+				847E1A0C242DEA09007042A2 /* Result.swift in Sources */,
+				847E1A0E242DEA09007042A2 /* Endpoint.swift in Sources */,
+				847E1A12242DEA09007042A2 /* MovieClient.swift in Sources */,
+				847E1A17242DEA5A007042A2 /* MovieFeedResult.swift in Sources */,
 				847E19FC242DE5E2007042A2 /* ArixMoviesTests.swift in Sources */,
+				847E1A10242DEA09007042A2 /* GenericAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7X6V24436;
 				INFOPLIST_FILE = ArixMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E7X6V24436;
 				INFOPLIST_FILE = ArixMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
