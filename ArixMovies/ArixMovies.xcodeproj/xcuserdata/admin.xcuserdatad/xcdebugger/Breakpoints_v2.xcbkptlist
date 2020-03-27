@@ -7,47 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E0996420-3941-400E-B2AB-D9BD02486276"
+            uuid = "58784575-B390-4C81-B037-AFCFA2F30536"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ArixMovies/Networking/MovieClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "getAllMoviePages()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E0996420-3941-400E-B2AB-D9BD02486276 - ce79eae5e6d528e4"
+                  uuid = "58784575-B390-4C81-B037-AFCFA2F30536 - 27118f7c7e92c4f0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (ArixMovies.Result&lt;Swift.Optional&lt;ArixMovies.MovieFeedResult&gt;, ArixMovies.APIError&gt;) -&gt; () in closure #1 (Swift.Int) -&gt; () in ArixMovies.MovieClient.getAllMoviePages() -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 () -&gt; () in closure #1 (ArixMovies.Result&lt;Swift.Optional&lt;ArixMovies.MovieFeedResult&gt;, ArixMovies.APIError&gt;) -&gt; () in closure #1 (Swift.Int) -&gt; () in ArixMovies.MovieClient.getAllMoviePages() -&gt; ()"
                   moduleName = "ArixMovies"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/arixmovies/ArixMovies/ArixMovies/Networking/MovieClient.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "958">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "560">
                </Location>
                <Location
-                  uuid = "E0996420-3941-400E-B2AB-D9BD02486276 - 494adc93d65f7654"
+                  uuid = "58784575-B390-4C81-B037-AFCFA2F30536 - 8ad4b6419094c304"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (ArixMoviesTests.Result&lt;Swift.Optional&lt;ArixMoviesTests.MovieFeedResult&gt;, ArixMoviesTests.APIError&gt;) -&gt; () in closure #1 (Swift.Int) -&gt; () in ArixMoviesTests.MovieClient.getAllMoviePages() -&gt; ()"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 () -&gt; () in closure #1 (ArixMoviesTests.Result&lt;Swift.Optional&lt;ArixMoviesTests.MovieFeedResult&gt;, ArixMoviesTests.APIError&gt;) -&gt; () in closure #1 (Swift.Int) -&gt; () in ArixMoviesTests.MovieClient.getAllMoviePages() -&gt; ()"
                   moduleName = "ArixMoviesTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/admin/arixmovies/ArixMovies/ArixMovies/Networking/MovieClient.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "958">
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "560">
                </Location>
             </Locations>
          </BreakpointContent>

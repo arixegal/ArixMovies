@@ -18,7 +18,17 @@ class MovieClient: APIClient {
     let session: URLSession
     var fetchedMoviePages : [[Movie]?]
     let numberOfPagesToFetch : Int
-    weak var delegate : MoviesClientDelegate?
+    weak var delegate : MoviesClientDelegate?{
+        didSet{
+            if allFetched(){
+                delegate?.allPagesFetched()
+            }
+        }
+    }
+    let barrierQueue = DispatchQueue(label: "Home.ArikSegal.ArixMovies.Paging", attributes: .concurrent)
+    var combinedResults : [Movie]{
+        return fetchedMoviePages.compactMap{$0}.flatMap{$0}
+    }
     
     init(configuration: URLSessionConfiguration, numberOfPagesToFetch:Int, delegate: MoviesClientDelegate?) {
         self.session = URLSession(configuration: configuration)
@@ -58,13 +68,14 @@ class MovieClient: APIClient {
                     fetchedMovies = []
                 }
                 
-                
-                if let weakSelf = self
-                {
-                    weakSelf.fetchedMoviePages[page - 1] = fetchedMovies // put in q
-                    if (weakSelf.allFetched())
+                self?.barrierQueue.async(flags: .barrier) {[weak self] in
+                    if let weakSelf = self
                     {
-                        weakSelf.delegate?.allPagesFetched()
+                        weakSelf.fetchedMoviePages[page - 1] = fetchedMovies
+                        if (weakSelf.allFetched())
+                        {
+                            weakSelf.delegate?.allPagesFetched()
+                        }
                     }
                 }
             }
@@ -73,6 +84,6 @@ class MovieClient: APIClient {
     
     func allFetched() -> Bool
     {
-        return fetchedMoviePages.compactMap{$0}.count == fetchedMoviePages.count // put in q
+        return fetchedMoviePages.compactMap{$0}.count == fetchedMoviePages.count
     }
 }
