@@ -110,17 +110,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" id="Cam-7F-0X6" customClass="MovieCell" customModule="ArixMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="224"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cam-7F-0X6" id="eUZ-1j-IGR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-f5-6cc">
-                                                    <rect key="frame" x="24" y="8" width="366" height="208"/>
+                                                    <rect key="frame" x="24" y="8" width="366" height="216"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incredibles2" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-EZ-zsV">
-                                                            <rect key="frame" x="8" y="0.0" width="92" height="138"/>
+                                                            <rect key="frame" x="8" y="8" width="92" height="138"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="138" id="CZK-Zh-c9s"/>
                                                                 <constraint firstAttribute="width" constant="92" id="WwE-Vg-p4V"/>
@@ -129,20 +129,20 @@
                                                                 <userDefinedRuntimeAttribute type="image" keyPath="image"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incredibles 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-l6-WUr">
-                                                            <rect key="frame" x="108" y="8" width="250" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incredibles 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-l6-WUr">
+                                                            <rect key="frame" x="108" y="8" width="250" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 14, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-9r-dgn">
-                                                            <rect key="frame" x="108" y="33" width="250" height="17"/>
+                                                            <rect key="frame" x="108" y="32.5" width="250" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-Fk-Dzm">
-                                                            <rect key="frame" x="8" y="146" width="350" height="54"/>
+                                                            <rect key="frame" x="8" y="154" width="350" height="54"/>
                                                             <string key="text">Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children.</string>
                                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,7 +158,7 @@
                                                         <constraint firstItem="DJT-EZ-zsV" firstAttribute="leading" secondItem="Dic-f5-6cc" secondAttribute="leading" constant="8" id="Id7-Dm-kji"/>
                                                         <constraint firstItem="P2R-Fk-Dzm" firstAttribute="trailing" secondItem="xah-l6-WUr" secondAttribute="trailing" id="OX8-0n-UsN"/>
                                                         <constraint firstItem="yq4-9r-dgn" firstAttribute="leading" secondItem="xah-l6-WUr" secondAttribute="leading" id="QjQ-RP-95z"/>
-                                                        <constraint firstItem="DJT-EZ-zsV" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" id="Uez-2e-UEg"/>
+                                                        <constraint firstItem="DJT-EZ-zsV" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" constant="8" id="Uez-2e-UEg"/>
                                                         <constraint firstItem="xah-l6-WUr" firstAttribute="top" secondItem="Dic-f5-6cc" secondAttribute="top" constant="8" id="cgB-I4-GsZ"/>
                                                         <constraint firstItem="yq4-9r-dgn" firstAttribute="trailing" secondItem="xah-l6-WUr" secondAttribute="trailing" id="fSb-BC-0w9"/>
                                                         <constraint firstItem="P2R-Fk-Dzm" firstAttribute="leading" secondItem="Dic-f5-6cc" secondAttribute="leading" constant="8" id="vgp-fn-FpN"/>
