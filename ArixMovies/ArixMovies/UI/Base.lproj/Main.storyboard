@@ -195,6 +195,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ivPoster" destination="DJT-EZ-zsV" id="t1y-Fh-6xi"/>
+                                            <outlet property="lblDate" destination="yq4-9r-dgn" id="Rb9-Kq-FiE"/>
+                                            <outlet property="lblOverview" destination="P2R-Fk-Dzm" id="6oX-3g-q4N"/>
+                                            <outlet property="lblTitle" destination="xah-l6-WUr" id="HuY-bP-FYo"/>
                                             <outlet property="viewMain" destination="Dic-f5-6cc" id="25y-so-Uyg"/>
                                         </connections>
                                     </tableViewCell>

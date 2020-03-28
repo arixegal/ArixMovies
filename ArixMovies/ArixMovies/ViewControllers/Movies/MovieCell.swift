@@ -13,6 +13,7 @@ class MovieCell: UITableViewCell {
     var movie : Movie?{
         didSet{
             guard let movieEntity = movie else {return}
+            
             if let posterFullURL = movieEntity.posterFullURL{
                 ivPoster.alpha = 1
                 ivPoster.downloaded(from: posterFullURL)
@@ -21,12 +22,18 @@ class MovieCell: UITableViewCell {
                 ivPoster.alpha = 0
             }
             
+            lblTitle.text = movieEntity.title ?? ""
+            lblOverview.text = movieEntity.overview ?? ""
+            lblDate.text = movieEntity.release_date ?? ""
         }
     }
     
     @IBOutlet weak var ivPoster: UIImageView!
     @IBOutlet weak var viewMain: UIView!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
     
+    @IBOutlet weak var lblOverview: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
