@@ -4,26 +4,21 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* ArixMovies is a mini-app that displays genres and movies taken directly from tmdb.org
+* All native - no third parties
+* Supports portait / landscape orientations
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Xcode 11.4 is required
+* Clone the repo and open the file ArixMovies.xcodeproj with Xcode
+* Command-R to run the app on simulator
+* Command-U to run tests
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* For contribution write to ArikIsInTown@Gmail.com
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* For feedback write to ArikIsInTown@Gmail.com
