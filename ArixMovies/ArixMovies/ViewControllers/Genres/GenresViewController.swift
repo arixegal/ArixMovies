@@ -47,7 +47,7 @@ extension collectionView : UICollectionViewDelegate, UICollectionViewDataSource
         guard let genres = genreClient.fetchedResult?.genres else {return}
         guard indexPath.item < genres.count else {return}
         guard let VC = self.storyboard?.instantiateViewController(identifier: "MoviesViewController") as? MoviesViewController else {return}
-        movieClient.userSelectedGenreId = genres[indexPath.item].id
+        MovieClient.userSelectedGenreId = genres[indexPath.item].id
         VC.movieClient = movieClient
         movieClient.delegate = VC
         navigationController?.pushViewController(VC, animated: true)

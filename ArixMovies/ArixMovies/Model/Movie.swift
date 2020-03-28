@@ -30,6 +30,11 @@ struct Movie: Decodable {
         guard let date = formatter.date(from: dateString) else {return ""}
         formatter.dateStyle = .full
         return "Released on \(formatter.string(from: date))"
-        
+    }
+    
+    var shouldBeHighlighted : Bool {
+        guard let userSelectedGenreID = MovieClient.userSelectedGenreId else {return false}
+        guard let myGenreIDs = genre_ids else {return false}
+        return myGenreIDs.contains(userSelectedGenreID)
     }
 }

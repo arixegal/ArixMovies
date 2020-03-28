@@ -14,6 +14,8 @@ class MovieCell: UITableViewCell {
         didSet{
             guard let movieEntity = movie else {return}
             
+            viewMain.backgroundColor = movieEntity.shouldBeHighlighted ? UIColor.lightGray : UIColor.white
+            
             if let posterFullURL = movieEntity.posterFullURL{
                 ivPoster.alpha = 1
                 ivPoster.downloaded(from: posterFullURL)
