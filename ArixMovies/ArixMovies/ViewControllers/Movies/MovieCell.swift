@@ -24,7 +24,7 @@ class MovieCell: UITableViewCell {
             
             lblTitle.text = movieEntity.title ?? ""
             lblOverview.text = movieEntity.overview ?? ""
-            lblDate.text = movieEntity.release_date ?? ""
+            lblDate.text = movieEntity.releaseDateForDisplay
         }
     }
     

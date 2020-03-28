@@ -22,4 +22,14 @@ struct Movie: Decodable {
     var posterFullURL : URL?{
         return (poster_path == nil) ? nil : URL(string: "\(URLs.TMDB.posters)\(poster_path!)")
     }
+    
+    var releaseDateForDisplay : String{
+        guard let dateString = release_date else {return ""}
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-mm-dd"
+        guard let date = formatter.date(from: dateString) else {return ""}
+        formatter.dateStyle = .full
+        return "Released on \(formatter.string(from: date))"
+        
+    }
 }
